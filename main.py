@@ -20,7 +20,7 @@ def load_questions():
 def run_quiz():
     print("RUN QUIZ PLACEHOLDER")
 
-def subject_selection_page():
+def subject_selection_page(year_group):
     subjects = ["Maths", "Science", "English", "History", "Geography", "Art", "Music", "Technology", "General Knowledge"]
 
     print("--- Subject Selection ---")
@@ -45,14 +45,14 @@ def subject_selection_page():
                 print()
                 break
 
-    print(f"Great! You selected {subject}, press ENTER to continue.")
-    print("// If you would like to change your subject, type 'Change' and press enter.")
+    print(f"Great! You selected year {year_group} {subject}, press ENTER to continue.")
+    print("// If you would like to change your subject or year, type 'Change' and press enter.")
 
     print()
     change = input()
     while change.lower() == "change":
         print()
-        subject_selection_page()
+        subject_selection_page(year_group)
         change = input()
     
     run_quiz()
@@ -87,7 +87,7 @@ def year_group_selection():
         year_group_selection()
         change = input()
 
-    subject_selection_page()
+    subject_selection_page(year_group)
 
 def welcome_page():
     print() #first set of text
