@@ -13,57 +13,67 @@ def load_questions():
 
     return questions
 
-
 def run_quiz():
     pass
 
-def topic_selection_page():
-    topics = ["Maths", "Science", "English", "History", "Geography", "Art", "Music", "Languages", "Technology", "General Knowledge"]
-    print("Press ENTER to scroll topics")
-    print("Type 'Start' and press ENTER to select the topic")
+def subject_selection_page():
+    subjects = ["Maths", "Science", "English", "History", "Geography", "Art", "Music", "Technology", "General Knowledge"]
+    print("--- Subject Selection ---")
+    print()
+    print("Press ENTER to scroll subjects")
+    print("Type 'Select' and press ENTER to select the subect")
+    print("Type 'Back' and press ENTER to change your year group")
     print()
     select = ""
-    topic = ""
-    while select.lower() != "start":
-        for i in range(len(topics)):
-            print(topics[i])
+    subject = ""
+    while select.lower() != "select":
+        for i in range(len(subjects)):
+            print(subjects[i])
+            print()
             select = input()
-            if select.lower() == "start":
-                topic = topics[i]
+            if select.lower() == "back":
+                year_group_selection()
+                break
+            if select.lower() == "select":
+                subject = subjects[i]
                 print()
                 break
 
-    print(f"Great! You selected {topic} press ENTER to continue.")
-    print("// If you would like to change your topic, type 'Change' and press enter.")
-
+    print(f"Great! You selected {subject}, press ENTER to continue.")
+    print("// If you would like to change your subject, type 'Change' and press enter.")
 
 def get_year_group(prompt):
     while True:
         try: # incase the user enters a string
             print()
             year_group = int(input(str(prompt)))
-            return(year_group)
+            break
         except ValueError: # if the user enters a string
             print()
             print("Please enter a number.")
 
-def check_year_group(year_group):
-    year_group = year_group
-    while year_group < 7 or year_group > 10: # if the year group is not between 7 and 10
+    while year_group < 7 or year_group > 9: # if the year group is not between 7 and 9
         print()
-        print("Please enter a year group between 7 and 10.")
+        print("Please enter a year group between 7 and 9.")
         year_group = get_year_group("")
+
     return year_group
 
 def year_group_selection():
     year_group = get_year_group("Please enter your year group: ")
-    year_group = check_year_group(year_group)
 
     print()
     print(f"Awesome! Year {year_group} selected, press ENTER to continue.")
     print("// If you would like to change your year group, type 'Change' and press enter.")
-    print()
-    
+    print()  
+
+    change = input() #continues on enter
+    while change.lower() == "change": # if the user wants to change their year group
+        year_group_selection()
+        change = input()
+
+    subject_selection_page()
+
 def welcome_page():
     print() #first set of text
     print("- - - - - - - - - - - - - - - - - -")
@@ -72,16 +82,8 @@ def welcome_page():
 
     year_group_selection()
 
-    change = input() #continues on enter
-    while change.lower() == "change": # if the user wants to change their year group
-        year_group_selection()
-        change = input()
-
-    else:
-        topic_selection_page() # if the user doesn't want to change their year group continue to the topic selection page
-
 def main():
-    load_questions()
+    #load_questions()
     welcome_page()
 
 main()
