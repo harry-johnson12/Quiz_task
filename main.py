@@ -1,7 +1,11 @@
 import csv
 
-#idea - general knowledge year 7-10 quiz on all general subjects // 
+#idea - general knowledge year 7-9 quiz on all general subjects // 
 # you can select your year group and the subject you want to be quizzed on
+
+#NEXT TO DO: - generate questions, - run quiz function // including hints, score system, timer, highscore system
+#Highscore system shoud be saved to a file fpr each subject in each year group
+#highscore ect should be visible before the start and score ect should be visbiel after the quiz
 
 def load_questions():
     questions = [] # list to store the questions
@@ -14,16 +18,18 @@ def load_questions():
     return questions
 
 def run_quiz():
-    pass
+    print("RUN QUIZ PLACEHOLDER")
 
 def subject_selection_page():
     subjects = ["Maths", "Science", "English", "History", "Geography", "Art", "Music", "Technology", "General Knowledge"]
+
     print("--- Subject Selection ---")
     print()
     print("Press ENTER to scroll subjects")
     print("Type 'Select' and press ENTER to select the subect")
     print("Type 'Back' and press ENTER to change your year group")
     print()
+
     select = ""
     subject = ""
     while select.lower() != "select":
@@ -41,6 +47,15 @@ def subject_selection_page():
 
     print(f"Great! You selected {subject}, press ENTER to continue.")
     print("// If you would like to change your subject, type 'Change' and press enter.")
+
+    print()
+    change = input()
+    while change.lower() == "change":
+        print()
+        subject_selection_page()
+        change = input()
+    
+    run_quiz()
 
 def get_year_group(prompt):
     while True:
