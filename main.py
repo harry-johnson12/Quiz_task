@@ -3,8 +3,8 @@ import csv
 #idea - general knowledge year 7-9 quiz on all general subjects // 
 # you can select your year group and the subject you want to be quizzed on
 
-#NEXT TO DO: - generate questions, - run quiz function // including hints, score system, timer, highscore system
-#Highscore system shoud be saved to a file fpr each subject in each year group
+#NEXT TO DO: restructure so functions are called in main  - generate questions, - run quiz function // including hints, score system, timer, highscore system
+#Highscore system shoud be saved to a file fpr each subject in each year group mapped to the name of the player
 #highscore ect should be visible before the start and score ect should be visbiel after the quiz
 
 def load_questions():
@@ -18,7 +18,7 @@ def load_questions():
     return questions
 
 def run_quiz():
-    print("RUN QUIZ PLACEHOLDER")
+    filter_questions(questions)
 
 def subject_selection_page(year_group):
     subjects = ["Maths", "Science", "English", "History", "Geography", "Art", "Music", "Technology", "General Knowledge"]
@@ -57,17 +57,20 @@ def subject_selection_page(year_group):
     
     run_quiz()
 
+
 def get_year_group(prompt):
     while True:
         try: # incase the user enters a string
-            print()
+            #print()
             year_group = int(input(str(prompt)))
             break
         except ValueError: # if the user enters a string
             print()
             print("Please enter a number.")
+            print()
 
-    while year_group < 7 or year_group > 9: # if the year group is not between 7 and 9
+
+    while year_group < 7 or year_group > 9: # if the year group is not between 7 and 9         
         print()
         print("Please enter a year group between 7 and 9.")
         year_group = get_year_group("")
@@ -89,16 +92,40 @@ def year_group_selection():
 
     subject_selection_page(year_group)
 
-def welcome_page():
+
+def get_name():
+    name = input("Please enter your name: ")
+    print()
+    print(f"Hello {name}! Press ENTER to continue.")
+    print("Type 'Change' and press ENTER to change your name.")
+    return name
+
+def name_selection():
+    print()
+    name = get_name()
+    print()
+    change = input()
+
+    while change.lower() == "change":
+        name = get_name()
+        print()
+        change = input()
+
+    return name
+
+
+def welcome_and_selections():
     print() #first set of text
     print("- - - - - - - - - - - - - - - - - -")
     print("Welcome to the Years 7-10 General Knowledge Quiz!")
     print("- - - - - - - - - - - - - - - - - -")
 
+    name_selection()
     year_group_selection()
 
+
 def main():
-    #load_questions()
-    welcome_page()
+    questions = load_questions()
+    welcome_and_selections()
 
 main()
