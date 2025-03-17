@@ -1,1 +1,296 @@
-year group, subject, question, answer, hint
+7,Math,What is 15% of 80?,12,Convert the percentage to a decimal first
+7,Math,Solve for x: 2x + 5 = 15,5,Subtract 5 from both sides
+7,Math,What is the area of a rectangle with length 8cm and width 5cm?,40 square cm,Multiply length by width
+7,Math,If a triangle has angles of 30° and 60° what is the third angle?,90°,Remember that angles in a triangle sum to 180°
+7,Math,What is the value of 3² + 4²?,25,Calculate each square then add them
+7,Math,What is the perimeter of a square with side length 7cm?,28cm,Multiply the side length by 4
+7,Math,Simplify: 3(x + 2) - 5,3x + 1,Distribute the 3 first
+7,Math,What is 2/5 of 35?,14,Multiply 35 by the fraction
+7,Math,Convert 0.625 to a fraction in its simplest form,5/8,Try multiplying by powers of 10
+7,Math,What is the median of the numbers 7 9 2 5 11?,7,Arrange the numbers in ascending order first
+7,Math,Calculate 2³ x 2²,32,Use the rule of exponents for multiplication
+7,Math,What is the equivalent decimal for 3/4?,0.75,Divide the numerator by the denominator
+7,Math,What is the sum of angles in a triangle?,180°,This is a fundamental property of triangles
+7,Math,Solve for y: y - 3 = 12,15,Add 3 to both sides
+7,Math,What is the value of 4 x 3 + 2 x 5?,22,Follow the order of operations (PEMDAS)
+7,Math,Find the mean of 4 7 8 9 12,8,Add all numbers and divide by the count
+7,Math,If a rectangle has a perimeter of 26cm and a width of 5cm what is its length?,8cm,Use the formula P = 2(l + w)
+7,Math,What is 20% of 150?,30,Convert percentage to decimal and multiply
+7,Math,What is the value of 3 + 4 x 2?,11,Multiplication comes before addition
+7,Math,What is the LCM of 6 and 8?,24,List multiples of each number to find the smallest common one
+7,Science,What is the chemical symbol for oxygen?,O,It's a single letter
+7,Science,What is the main gas in Earth's atmosphere?,Nitrogen,It makes up about 78% of the air
+7,Science,What are the three states of matter?,Solid liquid gas,Think about the different forms water can take
+7,Science,What is photosynthesis?,The process by which plants make food using sunlight,It involves converting light energy to chemical energy
+7,Science,What is the largest organ in the human body?,Skin,It covers your entire body
+7,Science,What type of energy transformation occurs in a light bulb?,Electrical to light and heat,Think about what goes in and what comes out
+7,Science,What is the Earth's primary source of energy?,The Sun,It provides light and heat
+7,Science,What are the building blocks of all living things?,Cells,They are the basic structural units of life
+7,Science,What is the process of water changing from liquid to gas called?,Evaporation,It happens when water is heated
+7,Science,What is the force that pulls objects toward the center of the Earth?,Gravity,It keeps us on the ground
+7,Science,What are the primary colors of light?,Red green blue,These colors combine to make white light
+7,Science,What is the pH of pure water?,7,It's considered neutral
+7,Science,What are the major parts of a plant?,Roots stem leaves flowers,They each have specific functions
+7,Science,What is the most abundant element in the universe?,Hydrogen,It's the first element on the periodic table
+7,Science,What is the process of a solid changing directly to a gas called?,Sublimation,Dry ice does this at room temperature
+7,Science,What is the function of the heart?,To pump blood throughout the body,It's a muscular organ
+7,Science,What is the scientific name for the sound waves that humans cannot hear?,Ultrasound,These have frequencies above 20000 Hz
+7,Science,What are animals that eat both plants and animals called?,Omnivores,Humans are an example
+7,Science,What is the Earth's position in the solar system?,Third planet from the Sun,It's in the "Goldilocks zone"
+7,English,What is a noun?,A person place thing or idea,It's often the subject of a sentence
+7,English,What is a verb?,An action word or state of being,It tells what the subject does
+7,English,What is an adjective?,A word that describes a noun,It adds detail to nouns
+7,English,What is a pronoun?,A word that replaces a noun,Examples include "he" "she" and "it"
+7,English,What is a simile?,A comparison using "like" or "as",It compares two different things
+7,English,What is a metaphor?,A direct comparison between two unlike things,It doesn't use "like" or "as"
+7,English,What is alliteration?,Repetition of the same sound at the beginning of words,Peter Piper picked a peck of pickled peppers
+7,English,What is the main purpose of a topic sentence?,To introduce the main idea of a paragraph,It usually appears at the beginning
+7,English,What is a synonym?,A word with the same or similar meaning as another word,Big and large are examples
+7,English,What is an antonym?,A word with the opposite meaning of another word,Hot and cold are examples
+7,English,What is a homophone?,Words that sound the same but have different meanings and spellings,Their there and they're are examples
+7,English,What is personification?,Giving human qualities to non-human things,The wind whispered through the trees
+7,English,What is the past tense of the verb "run"?,Ran,It's an irregular verb
+7,English,What is a compound word?,A word made up of two or more words,Sunflower and football are examples
+7,English,What is a clause?,A group of words with a subject and a verb,It can be independent or dependent
+7,English,What is a prefix?,A word part added to the beginning of a word that changes its meaning,Un- re- and pre- are examples
+7,English,What is a suffix?,A word part added to the end of a word that changes its meaning,-ful -less and -ly are examples
+7,English,What is the difference between "your" and "you're"?,"Your" shows possession; "you're" is a contraction of "you are","Your book" vs "You're reading"
+7,English,What is onomatopoeia?,Words that imitate sounds,Buzz splash and bang are examples
+7,English,What is the main difference between fiction and non-fiction?,Fiction is made up; non-fiction is based on facts,One tells stories; the other provides information
+7,History,Who was the first European explorer to reach Australia?,Willem Janszoon,He arrived in 1606
+7,History,What year did the First Fleet arrive in Australia?,1788,It was on January 26th
+7,History,Who was the first Prime Minister of Australia?,Edmund Barton,He took office after Federation
+7,History,In what year did the Australian Gold Rush begin?,1851,It started in New South Wales
+7,History,What was the name of Captain Cook's ship when he discovered Australia?,HMS Endeavour,It was a Royal Navy research vessel
+7,History,When did Aboriginal Australians first arrive in Australia?,At least 65000 years ago,They are the world's oldest continuous civilization
+7,History,What was the name of the policy that removed Aboriginal children from their families?,The Stolen Generations,It lasted from approximately 1910 to 1970
+7,History,In what year did Australia become a Federation?,1901,It happened on January 1st
+7,History,Who was the first woman elected to Australian Parliament?,Edith Cowan,She was elected in 1921
+7,History,What was the name of the ancient supercontinent that included Australia?,Gondwana,It existed about 550 million years ago
+7,History,When did women gain the right to vote in Australia?,1902,Australia was one of the first countries to grant this right
+7,History,What was the Eureka Stockade?,A rebellion of gold miners in Ballarat,It occurred in 1854
+7,History,Who was the famous Australian outlaw known as "the Iron Outlaw"?,Ned Kelly,He wore homemade armor
+7,History,What Aboriginal tool returns to the thrower?,Boomerang,It was used for hunting
+7,History,What was the White Australia Policy?,Immigration restrictions based on race,It was progressively dismantled after World War II
+7,History,When did the Sydney Opera House open?,1973,It was designed by Jørn Utzon
+7,History,Who was the longest-serving Prime Minister of Australia?,Robert Menzies,He served for over 18 years in total
+7,History,What was the name of the ship that brought the first convicts to Australia?,HMS Sirius,It was the flagship of the First Fleet
+7,History,When did Australia adopt the decimal currency system?,1966,It replaced the pound with the dollar
+7,History,What was Australia's involvement in the Vietnam War?,Australia sent troops to support South Vietnam,Over 60000 Australians served
+7,Geography,What is the largest desert in Australia?,Great Victoria Desert,It covers parts of Western Australia and South Australia
+7,Geography,What is the capital city of Australia?,Canberra,It was purposely built as the capital
+7,Geography,What is the largest coral reef system in the world?,Great Barrier Reef,It's located off the coast of Queensland
+7,Geography,What is the name of the large red rock in central Australia?,Uluru (Ayers Rock),It's sacred to Indigenous Australians
+7,Geography,What are the main mountain ranges in eastern Australia?,Great Dividing Range,They run parallel to the east coast
+7,Geography,What is the largest island of Australia?,Tasmania,It's separated from the mainland by Bass Strait
+7,Geography,What is the name of the sea between Australia and New Zealand?,Tasman Sea,It's part of the South Pacific Ocean
+7,Geography,What is the largest lake in Australia?,Lake Eyre,It's a salt lake that is usually dry
+7,Geography,What is the name of the strait separating Australia from Papua New Guinea?,Torres Strait,It's named after Spanish explorer Luis Váez de Torres
+7,Geography,What is the lowest point in Australia?,Lake Eyre,-15 meters below sea level
+7,Geography,What is the highest mountain in Australia?,Mount Kosciuszko,It's 2228 meters high
+7,Geography,What is the name of the large bay on the southern coast of Australia?,Great Australian Bight,It has spectacular cliffs
+7,Geography,What is the driest inhabited continent on Earth?,Australia,It has an average annual rainfall of less than 600mm
+7,Geography,What is the largest river system in Australia?,Murray-Darling Basin,It covers one-seventh of Australia's land area
+7,Geography,What is the largest city in Australia by population?,Sydney,It's famous for its harbor and opera house
+7,Geography,What is the name of the sea to the north of Australia?,Arafura Sea,It's between Australia and New Guinea
+7,Geography,What is the western-most point of mainland Australia?,Steep Point,It's in Western Australia
+7,Geography,What is the name of the large gulf on the north coast of Australia?,Gulf of Carpentaria,It's bounded by Cape York Peninsula and Arnhem Land
+7,Geography,What is the name of the process that forms Australia's Great Barrier Reef?,Coral formation,It involves tiny marine organisms building calcium carbonate structures
+7,Geography,What percentage of Australia is classified as desert?,About 35%,Australia is the driest inhabited continent
+8,Math,What is the value of 2³ x 3²?,72,Calculate the powers first
+8,Math,Solve for x: 3x - 7 = 14,7,Add 7 to both sides
+8,Math,What is the area of a circle with radius 5cm?,78.5 square cm,Use the formula A = πr²
+8,Math,Simplify: 2(3x - 4) + 5x,11x - 8,Distribute the 2 first
+8,Math,What is the square root of 144?,12,This is a perfect square
+8,Math,What is the value of y in the equation y = 3x + 2 when x = 4?,14,Substitute x = 4 into the equation
+8,Math,What is the sum of interior angles in a quadrilateral?,360°,This is a fundamental property of quadrilaterals
+8,Math,What is the product of -3 and -7?,21,Remember that negative x negative = positive
+8,Math,What is 3/4 divided by 1/2?,1.5 or 3/2,Multiply by the reciprocal of the divisor
+8,Math,What is the Pythagorean theorem?,a² + b² = c²,It relates the sides of a right triangle
+8,Math,What is the greatest common factor (GCF) of 24 and 36?,12,Find the largest number that divides both numbers
+8,Math,What is the volume of a cube with side length 4cm?,64 cubic cm,Use the formula V = s³
+8,Math,Solve for x: 2(x + 3) = 16,5,Divide both sides by 2 after distributing
+8,Math,What is the equation of a line with slope 2 and y-intercept 3?,y = 2x + 3,Use the slope-intercept form y = mx + b
+8,Math,What is the value of 2^8?,256,Multiply 2 by itself 8 times
+8,Math,What is the complementary angle to 35°?,55°,Complementary angles sum to 90°
+8,Math,What is the circumference of a circle with diameter 10cm?,31.4cm,Use the formula C = πd
+8,Math,What is the value of 5^0?,1,Any number raised to the power of 0 equals 1
+8,Math,What is the probability of rolling a 6 on a standard die?,1/6,There are 6 possible outcomes
+8,Math,What is the slope of a line passing through (2 5) and (4 9)?,2,Use the formula (y₂-y₁)/(x₂-x₁)
+8,Science,What is the chemical formula for water?,H₂O,It contains hydrogen and oxygen
+8,Science,What is the smallest unit of an element that still retains its properties?,Atom,It consists of protons neutrons and electrons
+8,Science,What is the process by which plants release water vapor?,Transpiration,It occurs mainly through the leaves
+8,Science,What are the three particles that make up an atom?,Protons neutrons electrons,They have different charges
+8,Science,What is the unit of electrical resistance?,Ohm,It's represented by the Greek letter omega (Ω)
+8,Science,What is the process of a liquid changing to a gas called?,Evaporation,It occurs at the surface of the liquid
+8,Science,What is the name of the force that opposes motion between two surfaces?,Friction,It converts kinetic energy to heat
+8,Science,What is the human body's largest organ by weight?,Liver,It detoxifies chemicals and metabolizes drugs
+8,Science,What is the chemical symbol for gold?,Au,It comes from the Latin word "aurum"
+8,Science,What type of energy is stored in an object due to its position?,Potential energy,It can be converted to kinetic energy
+8,Science,What is the difference between an acid and a base?,Acids have a pH less than 7; bases have a pH greater than 7,Think about the pH scale
+8,Science,What is the boiling point of water at standard atmospheric pressure?,100°C,It's 212°F
+8,Science,What are the main components of the respiratory system?,Lungs trachea bronchi alveoli,They facilitate gas exchange
+8,Science,What is the process of meiosis?,Cell division that produces gametes with half the chromosome number,It's important for sexual reproduction
+8,Science,What is the name of the closest star to Earth?,The Sun,It's about 150 million km away
+8,Science,What are the main components of blood?,Red blood cells white blood cells, Red... White...
+8,Science,What are the main components of blood?,Red blood cells white blood cells platelets plasma,Each has a specific function
+8,Science,What is the study of heredity and variation in organisms?,Genetics,It involves genes and DNA
+8,Science,What is the Earth's outermost layer called?,Crust,It's the thinnest layer
+8,Science,What is the most abundant gas in the Earth's atmosphere?,Nitrogen,It makes up about 78% of the air
+8,Science,What is Newton's First Law of Motion?,An object at rest stays at rest and an object in motion stays in motion unless acted upon by an external force,Also known as the law of inertia
+8,English,What is the main purpose of a thesis statement?,To state the main idea or argument of an essay,It usually appears at the end of the introduction
+8,English,What is the difference between a phrase and a clause?,A clause contains a subject and a verb; a phrase does not,Clauses can be independent or dependent
+8,English,What is the present perfect tense?,A tense that uses "have" or "has" plus the past participle,It connects the past to the present
+8,English,What is the meaning of the word "juxtapose"?,To place side by side for comparison or contrast,It helps highlight similarities or differences
+8,English,What is the function of a semicolon?,To connect two related independent clauses,It's stronger than a comma but weaker than a period
+8,English,What is the difference between active and passive voice?,In active voice the subject performs the action; in passive voice the subject receives the action,"The cat chased the mouse" vs "The mouse was chased by the cat"
+8,English,What is a rhetorical question?,A question asked for effect that doesn't expect an answer,It's used to make a point
+8,English,What is the purpose of foreshadowing in literature?,To hint at events that will occur later in the story,It builds suspense and anticipation
+8,English,What is the difference between denotation and connotation?,Denotation is the literal meaning; connotation is the emotional or cultural association,Home (denotation) vs Home (connotation of comfort and belonging)
+8,English,What is an oxymoron?,A figure of speech that combines contradictory terms,Examples include "jumbo shrimp" and "act naturally"
+8,English,What is the purpose of a conclusion in an essay?,To summarize main points and restate the thesis,It provides closure to the essay
+8,English,What is the difference between first-person and third-person narration?,First-person uses "I" or "we"; third-person uses "he" "she" or "they",It affects the perspective of the story
+8,English,What is a dangling modifier?,A modifier that doesn't clearly or logically modify anything in the sentence,"Running late the bus was missed" (Who was running late?)
+8,English,What is the difference between formal and informal language?,Formal language follows strict rules and avoids contractions; informal language is more casual and conversational,Formal language is used in academic writing
+8,English,What is the purpose of imagery in poetry?,To create vivid mental pictures using sensory details,It appeals to the senses
+8,English,What is the difference between a comma splice and a run-on sentence?,A comma splice uses a comma to join independent clauses; a run-on joins them without punctuation,Both are grammatical errors
+8,English,What is the purpose of a bibliography?,To list all sources used in research,It gives credit to original authors
+8,English,What is the difference between "affect" and "effect"?,"Affect" is usually a verb meaning to influence; "effect" is usually a noun meaning result,The effect of the medicine affected her quickly
+8,English,What is the purpose of a topic sentence in a paragraph?,To introduce the main idea of the paragraph,It guides the reader
+8,English,What is the difference between revision and editing?,Revision focuses on content and organization; editing focuses on grammar and punctuation,Revision comes before editing
+8,History,What was the Renaissance?,A period of cultural rebirth in Europe from the 14th to 17th centuries,It began in Italy
+8,History,Who was William the Conqueror?,The first Norman King of England,He won the Battle of Hastings in 1066
+8,History,What was the Treaty of Versailles?,The peace treaty that ended World War I,It was signed in 1919
+8,History,What was the Industrial Revolution?,A period of rapid industrialization and technological change,It began in Britain in the late 18th century
+8,History,Who was Galileo Galilei?,An Italian astronomer who supported the heliocentric model,He improved the telescope
+8,History,What was the Boston Tea Party?,A protest against British taxation in 1773,Colonists dumped tea into Boston Harbor
+8,History,What was the Battle of Waterloo?,The final defeat of Napoleon Bonaparte,It took place in 1815
+8,History,Who was Joan of Arc?,A French heroine who led troops against the English,She was burned at the stake
+8,History,What was the Magna Carta?,A charter of rights agreed to by King John of England,It limited the power of the monarch
+8,History,What was the Cold War?,A period of geopolitical tension between the US and USSR,It lasted from 1947 to 1991
+8,History,Who was Leonardo da Vinci?,An Italian Renaissance polymath,He painted the Mona Lisa
+8,History,What was the Black Death?,A devastating pandemic in the 14th century,It killed about one-third of Europe's population
+8,History,Who was Genghis Khan?,The founder of the Mongol Empire,He conquered much of Eurasia
+8,History,What was the Age of Exploration?,A period of extensive overseas exploration,It began in the 15th century
+8,History,Who was Martin Luther?,A German priest who initiated the Protestant Reformation,He wrote the 95 Theses
+8,History,What was the French Revolution?,A period of radical social and political upheaval in France,It began in 1789
+8,History,Who was Christopher Columbus?,An Italian explorer who reached the Americas,He sailed for Spain in 1492
+8,History,What was the Roman Empire?,An ancient civilization centered in Rome,It was one of the largest empires in history
+8,History,Who was Marie Antoinette?,The last Queen of France before the French Revolution,She was executed by guillotine
+8,History,What was the Silk Road?,An ancient network of trade routes,It connected East Asia to the Mediterranean
+8,Geography,What is the capital of Japan?,Tokyo,It's the world's most populous metropolitan area
+8,Geography,What is the longest river in the world?,Nile River,It flows through 11 countries
+8,Geography,What is the largest ocean on Earth?,Pacific Ocean,It covers about one-third of Earth's surface
+8,Geography,What is the tallest mountain in the world?,Mount Everest,It's 8848 meters above sea level
+8,Geography,What is the capital of Brazil?,Brasília,It was planned and developed in 1956
+8,Geography,What is the largest country by land area?,Russia,It spans 11 time zones
+8,Geography,What is the smallest continent by land area?,Australia,It's also a country
+8,Geography,What is the capital of Canada?,Ottawa,It's located in Ontario
+8,Geography,What is the largest rainforest in the world?,Amazon Rainforest,It's often called the "lungs of the Earth"
+8,Geography,What is the capital of Egypt?,Cairo,It's located near the Nile Delta
+8,Geography,What is the largest desert in the world?,Antarctic Desert,It's covered in ice
+8,Geography,What is the capital of France?,Paris,It's known as the "City of Light"
+8,Geography,What is the longest mountain range in the world?,Andes Mountains,They run along South America's western coast
+8,Geography,What is the capital of China?,Beijing,It hosted the 2008 Summer Olympics
+8,Geography,What is the largest lake by volume in the world?,Lake Baikal,It contains 20% of the world's unfrozen freshwater
+8,Geography,What is the capital of India?,New Delhi,It's part of the larger Delhi metropolitan area
+8,Geography,What is the strait that separates Asia from North America?,Bering Strait,It's between Russia and Alaska
+8,Geography,What is the capital of South Africa?,Pretoria (executive) Cape Town (legislative) Bloemfontein (judicial),It has three capital cities
+8,Geography,What is the largest gulf in the world?,Gulf of Mexico,It's bordered by the United States Mexico and Cuba
+8,Geography,What is the capital of Argentina?,Buenos Aires,It's known for tango dancing
+9,Math,What is the value of 4² + 3³?,43,Remember that exponents mean repeated multiplication
+9,Math,Simplify the expression 3x + 2y - 4x + 5y,-x + 7y,Combine like terms
+9,Math,Solve for x: 2x + 5 = 15,5,Isolate the variable by subtracting 5 from both sides
+9,Math,What is the slope of a line passing through the points (2; 5) and (4; 9)?,2,Use the formula (y₂ - y₁)/(x₂ - x₁)
+9,Math,Find the area of a circle with radius 7 cm,153.94 cm²,Use the formula πr²
+9,Math,Solve the equation: 3(x + 2) = 18,4,Distribute the 3 first
+9,Math,What is the sum of the interior angles of a hexagon?,720°,Use the formula (n - 2) × 180°
+9,Math,Factor completely: x² - 9,(x + 3)(x - 3),This is a difference of squares
+9,Math,Find the volume of a cube with side length 5 cm,125 cm³,Volume = side length cubed
+9,Math,What is the value of y in the equation 4y - 3 = 13?,4,Isolate y by adding 3 to both sides
+9,Math,Simplify: (2x³)(3x²),6x⁵,Multiply coefficients and add exponents
+9,Math,Find the median of the set: 7; 12; 3; 9; 15,9,Arrange in order and find the middle value
+9,Math,Convert 0.45 to a fraction in simplest form,9/20,Convert to an equivalent fraction and simplify
+9,Math,If a rectangle has length 12 cm and width 5 cm what is its perimeter?,34 cm,Perimeter = 2(length + width)
+9,Math,Solve for x: 2x/3 = 8,12,Multiply both sides by 3
+9,Math,What is the Pythagorean theorem?,a² + b² = c²,Relates the sides of a right triangle
+9,Math,Find the value of x if 5x - 7 = 3x + 9,8,Collect like terms and solve for x
+9,Math,What is 30% of 80?,24,Convert percentage to decimal and multiply
+9,Math,If y = 3x - 4 and x = 5 what is the value of y?,11,Substitute x = 5 into the equation
+9,Math,Expand: (x + 5)(x - 2),x² + 3x - 10,Use the FOIL method
+9,Science,What is the chemical symbol for gold?,Au,It comes from the Latin word 'aurum'
+9,Science,Which organelle is responsible for photosynthesis in plant cells?,Chloroplast,Contains chlorophyll which captures light energy
+9,Science,What is the unit of force in the SI system?,Newton,Named after Sir Isaac Newton
+9,Science,What type of energy is stored in a stretched spring?,Elastic potential energy,Energy stored in objects that can be stretched or compressed
+9,Science,What is the pH of a neutral solution?,7,Neither acidic nor basic
+9,Science,Which planet is known as the Red Planet?,Mars,Named after the Roman god of war
+9,Science,What is the chemical formula for water?,H₂O,Contains hydrogen and oxygen
+9,Science,What is the process by which plants make their food called?,Photosynthesis,Uses sunlight to convert carbon dioxide and water into glucose
+9,Science,Which subatomic particle has a positive charge?,Proton,Found in the nucleus of an atom
+9,Science,What is Newton's First Law of Motion?,An object at rest stays at rest and an object in motion stays in motion unless acted upon by an external force,Also known as the law of inertia
+9,Science,What type of rock is formed from molten magma?,Igneous rock,Forms when magma cools and solidifies
+9,Science,What is the largest organ in the human body?,Skin,Acts as a protective barrier
+9,Science,Which gas do plants absorb during photosynthesis?,Carbon dioxide,Plants convert this into oxygen
+9,Science,What is the basic unit of life?,Cell,All living organisms are made up of one or more cells
+9,Science,What is the name for a substance that speeds up a chemical reaction?,Catalyst,Remains unchanged at the end of the reaction
+9,Science,What part of the cell contains the genetic material?,Nucleus,Control center of the cell
+9,Science,What is the formula for calculating speed?,Distance divided by time,Speed = distance/time
+9,Science,What is the process by which liquid water changes into water vapor?,Evaporation,Occurs at the surface of liquids
+9,Science,What is the main function of the respiratory system?,To provide oxygen to the body and remove carbon dioxide,Involves breathing in and out
+9,English,What is a metaphor?,A figure of speech that makes a comparison between two unlike things without using like or as,Helps create vivid imagery
+9,English,What is the protagonist in a story?,The main character,The central figure the story revolves around
+9,English,What is a synonym?,A word that means the same or nearly the same as another word,Useful for avoiding repetition in writing
+9,English,What is the past tense of the verb 'to swim'?,Swam,Irregular verb form
+9,English,What is an adjective?,A word that describes or modifies a noun,Adds detail to descriptions
+9,English,What is alliteration?,The repetition of the same sound at the beginning of closely connected words,Creates rhythm and emphasis
+9,English,What is a simile?,A figure of speech comparing two unlike things using 'like' or 'as',Helps create clear images
+9,English,What is the plural form of 'child'?,Children,Irregular plural noun
+9,English,What is a verb?,A word that describes an action; state; or occurrence,The main part of the predicate of a sentence
+9,English,What is the main purpose of a thesis statement?,To state the main idea of an essay or paper,Usually appears in the introduction
+9,English,What is a noun?,A word that names a person; place; thing; or idea,Can be proper or common
+9,English,What is personification?,Giving human qualities to non-human things,Brings non-human elements to life
+9,English,What is an adverb?,A word that modifies a verb; adjective; or another adverb,Often ends in '-ly'
+9,English,What is the subject of a sentence?,The person or thing that performs the action or is being described,Usually comes before the verb
+9,English,What is onomatopoeia?,Words that imitate the sound they describe,Examples include buzz; splash; and pop
+9,English,What is a preposition?,A word that shows the relationship between a noun and other words in a sentence,Examples include in; on; under; and beside
+9,English,What is a homonym?,Words that sound the same but have different meanings,Examples include their/there/they're
+9,English,What is the main difference between a biography and an autobiography?,A biography is written by someone else; an autobiography is written by the subject themselves,Both are accounts of a person's life
+9,English,What is foreshadowing?,A literary device where the author gives hints about what will happen later in the story,Creates anticipation and tension
+9,History,When did World War I begin?,1914,Triggered by the assassination of Archduke Franz Ferdinand
+9,History,Who was the first European explorer to reach Australia?,Willem Janszoon,Dutch navigator who landed in 1606
+9,History,What was the name of the policy that removed Aboriginal children from their families?,The Stolen Generations,Government policy from early 1900s to 1970s
+9,History,When did Federation occur in Australia?,1901,Six colonies became one nation
+9,History,Who was the first Prime Minister of Australia?,Edmund Barton,Served from 1901 to 1903
+9,History,What treaty ended World War I?,Treaty of Versailles,Signed in 1919
+9,History,Who led the Russian Revolution in 1917?,Vladimir Lenin,Founded the Soviet Union
+9,History,What was the Renaissance?,A period of cultural rebirth and renewed interest in classical learning,Began in Italy in the 14th century
+9,History,Who was Captain James Cook?,British explorer who charted the east coast of Australia,Arrived at Botany Bay in 1770
+9,History,What was the Cold War?,A period of geopolitical tension between the United States and the Soviet Union,Lasted from 1947 to 1991
+9,History,What was the Industrial Revolution?,A period of transition to new manufacturing processes,Began in Britain in the late 18th century
+9,History,Who were the ANZACs?,Australian and New Zealand Army Corps who fought in World War I,Remembered for their role in the Gallipoli Campaign
+9,History,What was the Great Depression?,A severe worldwide economic depression in the 1930s,Began with the U.S. stock market crash of 1929
+9,History,Who was the first woman to become a member of Australian Parliament?,Edith Cowan,Elected to Western Australian Legislative Assembly in 1921
+9,History,What is the significance of the Eureka Stockade?,A rebellion of gold miners against colonial authority,Occurred in Ballarat in 1854
+9,History,When did Captain Arthur Phillip arrive with the First Fleet?,1788,Established the first European settlement in Australia
+9,History,What was the White Australia Policy?,Immigration restriction policies favoring European immigrants,Officially abolished in 1973
+9,History,Who was Ned Kelly?,An Australian bushranger and outlaw,Known for his homemade suit of armor
+9,History,What year did women gain the right to vote in Federal elections in Australia?,1902,Australia was among the first countries to grant women this right
+9,Geography,What is the capital city of Australia?,Canberra,Planned city designed by Walter Burley Griffin
+9,Geography,Which is the largest ocean on Earth?,Pacific Ocean,Covers more than 30% of Earth's surface
+9,Geography,What is the name of the largest desert in Australia?,Great Victoria Desert,Spans Western Australia and South Australia
+9,Geography,What is a peninsula?,A piece of land almost surrounded by water,Connected to the mainland on one side
+9,Geography,What are the three main types of rock?,Igneous; sedimentary; and metamorphic,Classified based on how they form
+9,Geography,What is the capital of Japan?,Tokyo,Located on the island of Honshu
+9,Geography,What is erosion?,The process of wearing away soil and rock by water; wind; or ice,Changes the landscape over time
+9,Geography,What is the largest coral reef system in the world?,Great Barrier Reef,Located off the coast of Queensland
+9,Geography,What causes tsunamis?,Underwater earthquakes; volcanic eruptions; or landslides,Creates powerful ocean waves
+9,Geography,What is the driest inhabited continent?,Australia,Much of the continent is desert or semi-arid
+9,Geography,What is the name of the line that divides the Earth into Northern and Southern Hemispheres?,Equator,0 degrees latitude
+9,Geography,What is the capital of New South Wales?,Sydney,Australia's largest city
+9,Geography,What is the difference between weather and climate?,Weather is short-term conditions; climate is the average weather pattern over a long period,Climate describes what's expected; weather describes what happens
+9,Geography,Which mountain range runs along Australia's east coast?,Great Dividing Range,Extends from Queensland to Victoria
+9,Geography,What is the primary cause of the greenhouse effect?,Gases in the atmosphere trapping heat,Carbon dioxide is a major greenhouse gas
+9,Geography,What is a topographic map?,A map showing physical features of the land,Uses contour lines to show elevation
+9,Geography,What is the name of the sea between Australia and New Zealand?,Tasman Sea,Named after Dutch explorer Abel Tasman
+9,Geography,What are the three main layers of the Earth?,Crust; mantle; and core,The core has inner and outer parts
+9,Geography,What is the longest river in Australia?,Murray River,Flows through New South Wales; Victoria; and South Australia

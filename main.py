@@ -25,16 +25,19 @@ def load_questions():
 
 def filter_questions(questions, year_group, subject):
     filtered_questions = []
-    pass
+    for questions in questions:
+        if questions["year"] == str(year_group) and questions["subject"] == subject:
+            filtered_questions.append(questions)
+
+    return filtered_questions
 
 def run_quiz(questions, year_group, subject, name):
-    #filtered_questions = filter_questions(questions, year_group, subject)
-    print()
-    print(year_group, subject, name)
-    print("QUIZ RUNNING PLACEHOLDER")
+    subject_questions = filter_questions(questions, year_group, subject)
+    for question in subject_questions: #just printing the questions for now
+        print(question["question"])
 
 def subject_selection(year_group):
-    subjects = ["Maths", "Science", "English", "History", "Geography", "Art", "Music", "Technology", "General Knowledge"]
+    subjects = ["Math", "Science", "English", "History", "Geography"]
 
     print("--- Subject Selection ---")
     print()
