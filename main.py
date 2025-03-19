@@ -1,17 +1,14 @@
 import csv
-
-#idea - general knowledge year 7-9 quiz on all general subjects // 
-# you can select your year group and the subject you want to be quizzed on
-
-#NEXT TO DO: restructure so functions are called in main()  
-
-# - generate questions, 20x question for each subject for each year group (7-9)
-# maths - science - english - history - geography - art - music - technology - general knowledge
+import random
+from difflib import SequenceMatcher
 
 # - run quiz function // including hints, score system, timer, highscore system
 
 #Highscore system shoud be saved to a file fpr each subject in each year group mapped to the name of the player
 #highscore ect should be visible before the start and score ect should be visbiel after the quiz
+
+def similarity_ratio(question_answer, user_answer):
+    return SequenceMatcher(None, question_answer, user_answer).ratio()
 
 def load_questions():
     questions = [] # list to store the questions
@@ -33,8 +30,40 @@ def filter_questions(questions, year_group, subject):
 
 def run_quiz(questions, year_group, subject, name):
     subject_questions = filter_questions(questions, year_group, subject)
-    for question in subject_questions: #just printing the questions for now
-        print(question["question"])
+    for i in range(11):
+        score = 0
+        current_question = random.choice(subject_questions)
+        subject_questions.remove(current_question)
+        question_text = current_question["question"]
+        question_answer = current_question["answer"]
+        question_hint = current_question["hint"]
+
+        print(question_text)
+        print()
+        user_answer = input("Enter your answer: ")
+        while user_answer == "":
+            print()
+            print("Answer cannot be blank.")
+            print()
+            user_answer = input("Enter your answer: ")
+
+        similarity = similarity_ratio(question_answer, user_answer)
+        print(similarity)
+        print(question_answer)
+
+        if similarity >= 0.5:
+            print()
+            print("Correct!")
+            print()
+            score += 1
+        else:
+            print()
+            print("Incorrect!")
+            print()
+            #would you like a hint?...
+        
+        #print(score)
+        #print(highscore)
 
 def subject_selection(year_group):
     subjects = ["Math", "Science", "English", "History", "Geography"]
