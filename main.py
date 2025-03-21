@@ -7,15 +7,12 @@ from check_answer import check_answer
 #Highscore system shoud be saved to a file fpr each subject in each year group mapped to the name of the player
 #highscore ect should be visible before the start and score ect should be visbiel after the quiz
 
-def similarity_ratio(question_answer, user_answer):
-    return SequenceMatcher("", question_answer, user_answer).ratio()
-
 def load_questions():
     questions = [] # list to store the questions
     with open("questions.csv", newline="") as questions_file:
             question_list = csv.reader(questions_file)
             for question in question_list: # for the rows in the csv file
-                question_loading = {"year": question[0], "subject": question[1], "question": question[2], "answer": question[3], "hint": question[4]} # create the loading question // item 0 in the row is the question, item 1 is the answer
+                question_loading = {"year": question[0], "subject": question[1], "question": question[2], "hint": question[3]} # create the loading question // item 0 in the row is the question, item 1 is the answer
                 questions.append(question_loading) # append the question to the list of questions
 
     return questions
@@ -42,7 +39,6 @@ def run_quiz(questions, year_group, subject, name):
         current_question = random.choice(subject_questions)
         subject_questions.remove(current_question)
         question_text = current_question["question"]
-        question_answer = current_question["answer"]
         question_hint = current_question["hint"]
 
         print()
@@ -69,13 +65,19 @@ def run_quiz(questions, year_group, subject, name):
                 print("Correct!")
                 if hint:
                     score += 0.5
+                    hint = False
                 else:
                     score += 1
             else:
                 print()
                 print(correct_and_feedback[1])
-            
+
+        if score > 5:
+            print(f"Well done you got {score}")
+        else:
+            print(f"There's always next time... you scored {score}")        
         print(score)
+
         #print(highscore)
 
 def subject_selection(year_group):
