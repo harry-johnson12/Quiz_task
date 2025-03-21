@@ -1,6 +1,6 @@
 import csv
 import random
-from difflib import SequenceMatcher
+from check_answer import check_answer
 
 # - run quiz function // including hints, score system, timer, highscore system
 
@@ -8,7 +8,7 @@ from difflib import SequenceMatcher
 #highscore ect should be visible before the start and score ect should be visbiel after the quiz
 
 def similarity_ratio(question_answer, user_answer):
-    return SequenceMatcher(None, question_answer, user_answer).ratio()
+    return SequenceMatcher("", question_answer, user_answer).ratio()
 
 def load_questions():
     questions = [] # list to store the questions
@@ -30,6 +30,13 @@ def filter_questions(questions, year_group, subject):
 
 def run_quiz(questions, year_group, subject, name):
     subject_questions = filter_questions(questions, year_group, subject)
+    hint = False
+    print("- - - - - - Year " + str(year_group) + " " + subject + " Quiz! - - - - - -")
+    #print("Highscore: " + highscore)
+    print()
+    print("If you would like a hint, type 'Hint' and press ENTER - these question will only be worth half a point.")
+    print("If you would like to skip the question, type 'Skip' and press ENTER.")
+
     for i in range(11):
         score = 0
         current_question = random.choice(subject_questions)
@@ -38,7 +45,8 @@ def run_quiz(questions, year_group, subject, name):
         question_answer = current_question["answer"]
         question_hint = current_question["hint"]
 
-        print(question_text)
+        print()
+        print(f"{i + 1}. {question_text}")
         print()
         user_answer = input("Enter your answer: ")
         while user_answer == "":
@@ -47,22 +55,27 @@ def run_quiz(questions, year_group, subject, name):
             print()
             user_answer = input("Enter your answer: ")
 
-        similarity = similarity_ratio(question_answer, user_answer)
-        print(similarity)
-        print(question_answer)
-
-        if similarity >= 0.5:
-            print()
-            print("Correct!")
-            print()
-            score += 1
-        else:
-            print()
-            print("Incorrect!")
-            print()
-            #would you like a hint?...
-        
-        #print(score)
+        if not user_answer.lower() == "skip":
+            
+            if user_answer.lower() == "hint":
+                print(question_hint)
+                user_answer = input("Enter your answer: ")
+                hint = True
+            
+            checked_answer = check_answer(question_text, user_answer)
+            correct_and_feedback = checked_answer.split("|")
+            
+            if correct_and_feedback[0] == "0":
+                print("Correct!")
+                if hint:
+                    score += 0.5
+                else:
+                    score += 1
+            else:
+                print()
+                print(correct_and_feedback[1])
+            
+        print(score)
         #print(highscore)
 
 def subject_selection(year_group):
@@ -101,7 +114,6 @@ def subject_selection(year_group):
 def get_year_group(prompt):
     while True:
         try: # incase the user enters a string
-            #print()
             year_group = int(input(str(prompt)))
             break
         except ValueError: # if the user enters a string
@@ -124,7 +136,6 @@ def year_group_selection():
     print()
     print(f"Awesome! Year {year_group} selected, press ENTER to continue.")
     print("// If you would like to change your year group, type 'Change' and press enter.")
-    print()  
     change = input() #continues on enter
 
     while change.lower() == "change": # if the user wants to change their year group
@@ -145,15 +156,16 @@ def get_name():
     print()
     print(f"Hello {name}! Press ENTER to continue.")
     print("Type 'Change' and press ENTER to change your name.")
+    print("- - - - - - - - - - - - - - - - - - - - - - - - - -")  
     return name
 
 def name_selection():
     print()
     name = get_name()
-    print()
     change = input()
 
     while change.lower() == "change":
+        print()
         name = get_name()
         print()
         change = input()
@@ -164,7 +176,7 @@ def main():
 
     print()
     print("- - - - - - - - - - - - - - - - - -")
-    print("Welcome to the Years 7-10 General Knowledge Quiz!")
+    print("Welcome to the Years 7-9 General Knowledge Quiz!")
     print("- - - - - - - - - - - - - - - - - -")
 
     questions = load_questions()
