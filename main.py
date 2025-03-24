@@ -26,16 +26,18 @@ def filter_questions(questions, year_group, subject):
     return filtered_questions
 
 def run_quiz(questions, year_group, subject, name):
+    score = 0
     subject_questions = filter_questions(questions, year_group, subject)
-    hint = False
     print("- - - - - - Year " + str(year_group) + " " + subject + " Quiz! - - - - - -")
     #print("Highscore: " + highscore)
     print()
-    print("If you would like a hint, type 'Hint' and press ENTER - these question will only be worth half a point.")
+    print("If you would like a hint, type 'Hint' and press ENTER - these question will only be worth one point - instead of two.")
     print("If you would like to skip the question, type 'Skip' and press ENTER.")
-
-    for i in range(11):
-        score = 0
+    print("AS THIS QUIZ RELYS ON NETWORK -- PLEASE BE PATIENT WHILE THE ANSWERS ARE FETCHED")
+    print()
+    for i in range(10):
+        hint = False
+        failed = False
         current_question = random.choice(subject_questions)
         subject_questions.remove(current_question)
         question_text = current_question["question"]
@@ -54,31 +56,55 @@ def run_quiz(questions, year_group, subject, name):
         if not user_answer.lower() == "skip":
             
             if user_answer.lower() == "hint":
+                print()
                 print(question_hint)
                 user_answer = input("Enter your answer: ")
                 hint = True
             
-            checked_answer = check_answer(question_text, user_answer)
-            correct_and_feedback = checked_answer.split("|")
+            #issues with math answers
+            attempts = 0
+            while attempts < 3:
+                try:
+                    checked_answer = check_answer(question_text, user_answer)
+                    break
+                except:
+                    attempts += 1
             
-            if correct_and_feedback[0] == "0":
-                print("Correct!")
+            if attempts > 2:
+                print()
+                print("- - - - Failed to fetch answer - - - -")
+                print("You can have the points!")
+                print()
+                failed = True
+
                 if hint:
-                    score += 0.5
+                    score += 1
                     hint = False
                 else:
-                    score += 1
-            else:
-                print()
-                print(correct_and_feedback[1])
+                    score += 2
 
-        if score > 5:
-            print(f"Well done you got {score}")
-        else:
-            print(f"There's always next time... you scored {score}")        
-        print(score)
+            if failed == False:
+                correct_and_feedback = checked_answer.split("|")
+                
+                if correct_and_feedback[0] == "0":
+                    print("Correct!")
+                    if hint:
+                        score += 1
+                        hint = False
+                    else:
+                        score += 2
+                else:
+                    print()
+                    print(f"{correct_and_feedback[1]}")
 
-        #print(highscore)
+
+    print()
+    if score > 9:
+        print(f"Well done! you scored {score}")
+    else:
+        print(f"There's always next time... you scored {score}")   
+
+    #print(highscore)
 
 def subject_selection(year_group):
     subjects = ["Math", "Science", "English", "History", "Geography"]
@@ -175,7 +201,7 @@ def name_selection():
     return name
 
 def main():
-
+    playing = True
     print()
     print("- - - - - - - - - - - - - - - - - -")
     print("Welcome to the Years 7-9 General Knowledge Quiz!")
@@ -183,8 +209,19 @@ def main():
 
     questions = load_questions()
     name = name_selection()
-    year_group = year_group_selection()
-    subject = subject_selection(year_group)
-    run_quiz(questions, year_group, subject, name)
+
+    while playing:
+        year_group = year_group_selection()
+        subject = subject_selection(year_group)
+        run_quiz(questions, year_group, subject, name)
+        print()
+        playing = input("Would you like to play again? // if so enter 'Yes' ")
+        print()
+        if playing.lower() != "yes":
+            playing = False
+
+    print()
+    print(f"Thanks for playing {name}!")
+        
 
 main()

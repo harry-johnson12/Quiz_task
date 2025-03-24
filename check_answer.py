@@ -7,7 +7,7 @@ def check_answer(question_text, user_answer):
 
     # Prompt construction
 
-    setup_prompt =  "You will recieve a question and user response to that question. They are pretty basic general knowledge questions. I would like you to work out if they have the answer correct, if so, return a very simple Python string, that looks like this -- 0 if they are correct or 1|feedback if they are incorrect - the feedback should be max 2 sentences. Give some insight into the correct answer, dont just say thats wrong, this is the correct answser.)"
+    setup_prompt =  "You will recieve a question and user response to that question. They are pretty basic general knowledge questions. I would like you to work out if they have the answer correct, if so, return a very simple Python string, that looks like this -- 0 if they are correct, or 1|feedback if they are incorrect - the feedback should be max 2 sentences - very clear and consise. Give some insight into the correct answer, DONT just say thats wrong, this is the correct answser."
     question = question_text
     user_answer = user_answer
 
