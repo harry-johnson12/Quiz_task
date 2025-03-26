@@ -2,17 +2,19 @@ import csv
 import random
 from check_answer import check_answer
 
-# - highscore system 
+#highscore file format is: name, year, subject, score
 
-#Highscore system shoud be saved to a file fpr each subject in each year group mapped to the name of the player
-#highscore ect should be visible before the start and score ect should be visbiel after the quiz
 def load_highscores():
     highscores = []
-    with open("highscores.csv", newline="") as highscore_file:
+    with open("highscores.csv", mode="r", newline="") as highscore_file:
         highscore_list = csv.reader(highscore_file)
         for score in highscore_list:
-            highscore_loading = {"name": score[0], "year": score[1], "subject": score[2], "high_score": score[3]}
-            highscores.append(highscore_loading)
+            try:
+                highscore_loading = {"name": score[0], "year": score[1], "subject": score[2], "high_score": score[3]}
+                highscores.append(highscore_loading)
+            except:
+                pass 
+                print("there was a line with incomplete data")
 
     return highscores
 
@@ -21,13 +23,13 @@ def highscore_appender(name, year_group, subject, score):
         highscore_editor = csv.writer(highscore_file)
         new_score = [name, year_group, subject, score]
         highscore_editor.writerow(new_score)
+        
+def find_highscore(name, year_group, subject, highscores):
+    for score in (highscores):
+        if score["name"] == name and score["subject"] == subject and score["year"] == str(year_group): #do they have a highscore
+            highscore = int(score["high_score"])
 
-        highscores = []
-        highscores = load_highscores()
-        print(highscores)
-        
-        return highscores
-        
+    return highscore
 
 def load_questions():
     questions = [] # list to store the questions
@@ -48,19 +50,19 @@ def filter_questions(questions, year_group, subject):
     return filtered_questions
 
 def run_quiz(questions, year_group, subject, name, highscores):
-    current_score = 0
-    highscore = "You haven't played this one before!"
     subject_questions = filter_questions(questions, year_group, subject)
 
-    for score in highscores:
-        if score["name"] == name and score["subject"] == subject and score["year"] == year_group:
-            highscore == score["high_score"]
+    current_score = 0
+    highscore = "You haven't played this one before!"
+    for score in (highscores): #reverse to find the newest highscore for them
+        if score["name"] == name and score["subject"] == subject and score["year"] == str(year_group): #do they have a highscore
+            highscore = int(score["high_score"])
 
-    print("- - - - - - Year " + str(year_group) + " " + subject + " Quiz! - - - - - -")
+    print("- - - - - - Year " + str(year_group) + " " + subject + " Quiz! - - - - - -") # what quiz are they playing
     print()
 
     if not type(highscore) == str:
-        print("Your highscore for this quiz is: " + highscore)
+        print(f"Your highscore for this quiz is: {highscore}, try beat it!")
     else:
         print(highscore)
         
@@ -69,7 +71,8 @@ def run_quiz(questions, year_group, subject, name, highscores):
     print("If you would like to skip the question, type 'Skip' and press ENTER.")
     print("AS THIS QUIZ RELYS ON NETWORK -- PLEASE BE PATIENT WHILE THE ANSWERS ARE FETCHED")
     print()
-    for i in range(10):
+
+    for i in range(10): #loop for 10 questions
         hint = False
         failed = False
         current_question = random.choice(subject_questions)
@@ -78,25 +81,27 @@ def run_quiz(questions, year_group, subject, name, highscores):
         question_hint = current_question["hint"]
 
         print()
-        print(f"{i + 1}. {question_text}")
+        print(f"{i + 1}. {question_text}") #e.g 5. question
         print()
+
         user_answer = input("Enter your answer: ")
-        while user_answer == "":
+        
+        while user_answer == "": # blank answer
             print()
             print("Answer cannot be blank.")
             print()
             user_answer = input("Enter your answer: ")
         
-        if user_answer.lower() == "hint":
+        if user_answer.lower() == "hint": #they want a hint
                 print()
                 print(f"- - - - - {question_hint} - - - - -")
                 print()
                 user_answer = input("Enter your answer: ")
                 hint = True
 
-        if not user_answer.lower() == "skip":
+        if not user_answer.lower() == "skip": # if they say skip - skip all of this
 
-            attempts = 0
+            attempts = 0 #attempts to load a question
             while attempts < 3:
                 try:
                     checked_answer = check_answer(question_text, user_answer)
@@ -104,23 +109,23 @@ def run_quiz(questions, year_group, subject, name, highscores):
                 except:
                     attempts += 1
             
-            if attempts > 2:
+            if attempts > 2: #more than two attempts to fetch the question
                 print()
                 print("- - - - Failed to fetch answer - - - -")
                 print("You can have the points!")
                 print()
                 failed = True
 
-                if hint:
+                if hint: # if they wanted a hint only eligable for 1 point
                     current_score += 1
                     hint = False
                 else:
                     current_score += 2
 
             if failed == False:
-                correct_and_feedback = checked_answer.split("|")
+                correct_and_feedback = checked_answer.split("|") #use this character as it wont appear in answers
                 
-                if correct_and_feedback[0] == "0":
+                if correct_and_feedback[0] == "0": # if they got it correct
                     print()
                     print("Correct!")
                     if hint:
@@ -135,18 +140,27 @@ def run_quiz(questions, year_group, subject, name, highscores):
 
     print()
     if current_score > 9:
-        print(f"Well done! you scored {current_score}")
+        print(f"- - - Well done! you scored {current_score}")       
     else:
-        print(f"There's always next time... you scored {current_score}")   
+        print(f"- - - There's always next time... you scored {current_score}")   
     
+    new_highscore = False
+    #determine their highscore/add it to the list
     if type(highscore) == str:
-        highscores = highscore_appender(name, year_group, subject, current_score)
+        highscore_appender(name, year_group, subject, current_score)
+  
+    elif current_score > highscore:
+        highscore_appender(name, year_group, subject, current_score)
+        new_highscore = True
+    
+    updated_highscores = load_highscores()
+    highscore = find_highscore(name, year_group, subject, updated_highscores)
+    print()
 
-    #elif highscore > current_score: 
-        #pass
-
-
-    #print(highscore)
+    if new_highscore:
+        print(f"- - - NEW HIGHSCORE! Your highscore for {year_group} {subject} is now {highscore}! - - -")
+    else:
+        print(f"- - - Your highscore for {year_group} {subject} is {highscore}")
 
 def subject_selection(year_group):
     subjects = ["Math", "Science", "English", "History", "Geography"]
@@ -252,7 +266,7 @@ def name_selection(highscores):
 
     while change.lower() == "change":
         print()
-        name = get_name()
+        name = get_name(highscores)
         print()
         change = input()
 
@@ -279,8 +293,7 @@ def main():
         if playing.lower() != "yes":
             playing = False
 
-    print()
-    print("- - - - - - - - - - - - -")
     print(f"Thanks for playing {name}!")
-        
+    print("- - - - - - - - - - - - -")
+
 main()
