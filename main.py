@@ -94,7 +94,7 @@ def run_quiz(questions, year_group, subject, name, highscores):
         
         if user_answer.lower() == "hint": #they want a hint
                 print()
-                print(f"- - - - - {question_hint} - - - - -")
+                print(f"- - Hint: {question_hint} - - - - -")
                 print()
                 user_answer = input("Enter your answer: ")
                 hint = True
@@ -133,9 +133,15 @@ def run_quiz(questions, year_group, subject, name, highscores):
                         hint = False
                     else:
                         current_score += 2
-                else:
+                elif correct_and_feedback[0] == "1":
                     print()
                     print(f"{correct_and_feedback[1]}")
+                else:
+                    print()
+                    print("Oops! something went wrong")
+                    print("Heres some points anyways!")
+                    print("Next question...")
+                    current_score += 2
 
 
     print()
@@ -158,9 +164,9 @@ def run_quiz(questions, year_group, subject, name, highscores):
     print()
 
     if new_highscore:
-        print(f"- - - NEW HIGHSCORE! Your highscore for {year_group} {subject} is now {highscore}! - - -")
+        print(f"- - - NEW HIGHSCORE! Your highscore for year {year_group} {subject} is now {highscore}!")
     else:
-        print(f"- - - Your highscore for {year_group} {subject} is {highscore}")
+        print(f"- - - Your highscore for year {year_group} {subject} is {highscore}")
 
 def subject_selection(year_group):
     subjects = ["Math", "Science", "English", "History", "Geography"]

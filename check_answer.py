@@ -7,7 +7,7 @@ def check_answer(question_text, user_answer):
 
     # Prompt construction
 
-    setup_prompt =  "You will recieve a question and user response to that question. They are year 7-9 NSW quiz questions. I would like you to work out if they have the answer correct, allow for differnet wording or spelling mistakes, and dont worry about units in math, but make sure their content is correct. be especially carefull with math questions. if they are correct, return a very simple Python string, that looks like this -- 0 if they are correct, or 1|feedback if they are incorrect - the feedback should be max 2 sentences - very clear and consise. Give some insight into the correct answer, DONT just say thats wrong, this is the correct answer."
+    setup_prompt =  "Receive a question and a user response from Year 7-9 NSW quiz questions. Determine if the answer is correct, allowing for varied wording or spelling errors, and ignore units and spacing in math. Focus on content accuracy, especially in math, double-checking equations to avoid past mistakes. Return a Python string: '0' if correct, or '1|feedback' if incorrect, where feedback is max 2 concise sentences addressing the user as 'you' or 'your response,' providing insight into the correct answer before stating it."
     question = question_text
     user_answer = user_answer
 
