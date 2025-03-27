@@ -3,6 +3,10 @@ import random
 from check_answer import check_answer
 
 #highscore file format is: name, year, subject, score
+#questions file format is: year, subject, question, hint
+
+#could add what year group they are for to the questions file to imporve scalability
+#make it look good - ask ben robbo how he did his
 
 def load_highscores():
     highscores = []
@@ -94,7 +98,7 @@ def run_quiz(questions, year_group, subject, name, highscores):
         
         if user_answer.lower() == "hint": #they want a hint
                 print()
-                print(f"- - Hint: {question_hint} - - - - -")
+                print(f"- - Hint: {question_hint} - - -")
                 print()
                 user_answer = input("Enter your answer: ")
                 hint = True
@@ -146,9 +150,9 @@ def run_quiz(questions, year_group, subject, name, highscores):
 
     print()
     if current_score > 9:
-        print(f"- - - Well done! you scored {current_score}")       
+        print(f"- - Well done! you scored {current_score}")       
     else:
-        print(f"- - - There's always next time... you scored {current_score}")   
+        print(f"- - There's always next time... you scored {current_score}")   
     
     new_highscore = False
     #determine their highscore/add it to the list
@@ -164,9 +168,9 @@ def run_quiz(questions, year_group, subject, name, highscores):
     print()
 
     if new_highscore:
-        print(f"- - - NEW HIGHSCORE! Your highscore for year {year_group} {subject} is now {highscore}!")
+        print(f"- - NEW HIGHSCORE! Your highscore for year {year_group} {subject} is now {highscore}!")
     else:
-        print(f"- - - Your highscore for year {year_group} {subject} is {highscore}")
+        print(f"- - Your highscore for year {year_group} {subject} is {highscore}")
 
 def subject_selection(year_group):
     subjects = ["Math", "Science", "English", "History", "Geography"]
@@ -249,6 +253,7 @@ def get_name(highscores):
                 print()
                 played_before = input("This name is in use, enter 'Yes' if you have you played before and used this name. ")
                 if played_before.lower() == "yes":
+                    check_again = False
                     break
 
                 print()
@@ -273,7 +278,6 @@ def name_selection(highscores):
     while change.lower() == "change":
         print()
         name = get_name(highscores)
-        print()
         change = input()
 
     return name
@@ -294,6 +298,7 @@ def main():
         subject = subject_selection(year_group)
         run_quiz(questions, year_group, subject, name, highscores)
         print()
+        print("- - - - - - - - - - - - - - - - - - - - - - - - - -")
         playing = input("Would you like to play again? // if so enter 'Yes' ")
         print()
         if playing.lower() != "yes":
