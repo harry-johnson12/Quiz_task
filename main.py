@@ -53,14 +53,15 @@ def filter_questions(questions, year_group, subject):
 
     return filtered_questions
 
-def run_quiz(questions, year_group, subject, name, highscores):
+def run_quiz(questions, year_group, subject, name):
     subject_questions = filter_questions(questions, year_group, subject)
-
+    highscores = load_highscores()
     current_score = 0
-    highscore = "You haven't played this one before!"
-    for score in (highscores): #reverse to find the newest highscore for them
-        if score["name"] == name and score["subject"] == subject and score["year"] == str(year_group): #do they have a highscore
-            highscore = int(score["high_score"])
+   
+    try:
+        highscore = find_highscore(name, year_group, subject, highscores)
+    except:
+        highscore = "You haven't played this one before!"
 
     print("- - - - - - Year " + str(year_group) + " " + subject + " Quiz! - - - - - -") # what quiz are they playing
     print()
@@ -163,8 +164,8 @@ def run_quiz(questions, year_group, subject, name, highscores):
         highscore_appender(name, year_group, subject, current_score)
         new_highscore = True
     
-    updated_highscores = load_highscores()
-    highscore = find_highscore(name, year_group, subject, updated_highscores)
+    highscores = load_highscores()
+    highscore = find_highscore(name, year_group, subject, highscores)
     print()
 
     if new_highscore:
@@ -296,7 +297,7 @@ def main():
     while playing:
         year_group = year_group_selection()
         subject = subject_selection(year_group)
-        run_quiz(questions, year_group, subject, name, highscores)
+        run_quiz(questions, year_group, subject, name)
         print()
         print("- - - - - - - - - - - - - - - - - - - - - - - - - -")
         playing = input("Would you like to play again? // if so enter 'Yes' ")
