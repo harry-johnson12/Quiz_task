@@ -1,4 +1,5 @@
-QuizPy is a command line (open answer) quiz game, where you can choose between 5 different subject areas across years 7, 8 and 9. 
+## QuizPy 
+This is a command line (open answer) quiz game, where you can choose between 5 different subject areas across years 7, 8 and 9. 
 
 This game was created by Harry Johnson for his Y11 Software Engineering task 1 and was released on the 30th of March 2025.
 ## How to play
