@@ -15,15 +15,13 @@ def check_answer(question_text, user_answer):
 
     # Send a text-based question
     response = client.chat.completions.create(
-        model="gpt-4o",  # Use the appropriate model
+        model="gpt-4o",  # Using 4o for accuracy instead of 3.5 - this might be costing you a lot more but you tell me
         messages=[
             {"role": "user", "content": f"{full_prompt}"},
         ])
 
     # Capture the response in a variable
     answer = response.choices[0].message.content
-    
+
     # Print the response
     return answer
-
-#try gpt-4o

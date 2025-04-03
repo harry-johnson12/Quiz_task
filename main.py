@@ -114,15 +114,10 @@ def run_quiz(questions, year_group, subject, name):
             if attempts > 2: #more than two attempts to fetch the question
                 print()
                 print("- - - - Failed to fetch answer - - - -")
-                print("- - - - You can have the points! - - - ")
-                print()
+                print("- - - - - Here's one point! - - - ")
                 failed = True
 
-                if hint: # if they wanted a hint only eligable for 1 point
-                    current_score += 1
-                    hint = False
-                else:
-                    current_score += 2
+                current_score += 1
 
             if failed == False:
                 correct_and_feedback = checked_answer.split("|") #use this character as it wont appear in answers
@@ -144,18 +139,20 @@ def run_quiz(questions, year_group, subject, name):
                     print("Heres some points anyways!")
                     print("Next question...")
                     current_score += 2
+            
+        print()
 
-
-    print()
+    print("- - - - - - - - - - - - - - - - - - - - - - - - - -")
     if current_score > 9:
-        print(f"- - Well done! you scored {current_score}")       
+        print(f"Well done! you scored {current_score}")       
     else:
-        print(f"- - There's always next time... you scored {current_score}")   
+        print(f"There's always next time... you scored {current_score}")   
     
     new_highscore = False
     #determine their highscore/add it to the list
     if type(highscore) == str:
         highscore_appender(name, year_group, subject, current_score)
+        new_highscore = True
   
     elif current_score > highscore:
         highscore_appender(name, year_group, subject, current_score)
@@ -166,9 +163,9 @@ def run_quiz(questions, year_group, subject, name):
     print()
 
     if new_highscore:
-        print(f"- - NEW HIGHSCORE! Your highscore for year {year_group} {subject} is now {highscore}!")
+        print(f"NEW HIGHSCORE! Your highscore for year {year_group} {subject} is now {highscore}!")
     else:
-        print(f"- - Your highscore for year {year_group} {subject} is {highscore}")
+        print(f"Your highscore for year {year_group} {subject} is {highscore}")
 
 def subject_selection(year_group):
     subjects = ["Math", "Science", "English", "History", "Geography"]
@@ -280,14 +277,21 @@ def name_selection(highscores):
 
     return name
 
-def main():
-    playing = True
+def welcome_message():
     print()
     print("- - - - - - - - - - - - - - - - - -")
     print("Welcome to the Years 7-9 General Knowledge Quiz!")
-    print("Please note this quiz requires a stable internet connection.")
     print("- - - - - - - - - - - - - - - - - -")
+    print()
+    print("Please note this quiz requires a stable internet connection.")
+    print()
+    print("Furthermore, there may be an occasional mistake in checking answers,")
+    print("this is due to the quiz checking answers with OpenAi's 4o GPT model.")
 
+def main():
+    welcome_message()
+
+    playing = True
     questions = load_questions()
     highscores = load_highscores()
     name = name_selection(highscores)
@@ -296,8 +300,8 @@ def main():
         year_group = year_group_selection()
         subject = subject_selection(year_group)
         run_quiz(questions, year_group, subject, name)
-        print()
         print("- - - - - - - - - - - - - - - - - - - - - - - - - -")
+        print()
         playing = input("Would you like to play again? // if so enter 'Yes' ")
         print()
         if playing.lower() != "yes":
