@@ -7,21 +7,23 @@ def check_answer(question_text, user_answer):
 
     # Prompt construction
 
-    setup_prompt =  "Receive a question and a user response from Year 7-9 NSW quiz questions. Determine if the answer is correct, allowing for varied wording or spelling errors, and ignore units and spacing in math. Focus on content accuracy, especially in math, double-checking equations to avoid past mistakes. Return a Python string: '0' if correct, or '1|feedback' if incorrect, where feedback is max 2 concise sentences addressing the user as 'you' or 'your response,' providing insight into the correct answer before stating it."
+    setup_prompt =  "You will receive a question and a user response from Year 7-9 NSW quiz questions. Determine if the answer is correct, allowing for varied wording or spelling errors, and ignore units and spacing in math. Focus on accuracy and reason in checking mathematical answers. Return a string: '0' if correct, or '1|feedback' if incorrect, where feedback is max 2 concise sentences, dont start with 'feedback' address the user as 'you' or 'your response,' providing insight into the correct answer before linking back to it. Avoid contradicting yourself in feedback by saying your response 'x' was incorrect the correct answer was 'x'."
     question = question_text
     user_answer = user_answer
 
-    full_prompt = f"{setup_prompt}, the question is {question}, and the user response is {user_answer}"
+    full_prompt = f"{setup_prompt} The question is {question}, and the user response is {user_answer}"
 
     # Send a text-based question
     response = client.chat.completions.create(
-        model="gpt-3.5-turbo",  # Use the appropriate model
+        model="gpt-4o",  # Use the appropriate model
         messages=[
             {"role": "user", "content": f"{full_prompt}"},
         ])
 
     # Capture the response in a variable
     answer = response.choices[0].message.content
-
+    
     # Print the response
     return answer
+
+#try gpt-4o

@@ -5,9 +5,6 @@ from check_answer import check_answer
 #highscore file format is: name, year, subject, score
 #questions file format is: year, subject, question, hint
 
-#could add what year group they are for to the questions file to imporve scalability
-#make it look good - ask ben robbo how he did his
-
 def load_highscores():
     highscores = []
     with open("highscores.csv", mode="r", newline="") as highscore_file:
@@ -117,7 +114,7 @@ def run_quiz(questions, year_group, subject, name):
             if attempts > 2: #more than two attempts to fetch the question
                 print()
                 print("- - - - Failed to fetch answer - - - -")
-                print("You can have the points!")
+                print("- - - - You can have the points! - - - ")
                 print()
                 failed = True
 
@@ -213,7 +210,7 @@ def get_year_group(prompt):
             break
         except ValueError: # if the user enters a string
             print()
-            print("Please enter a number.")
+            print("Please enter a number. (7, 8, or 9)")
             print()
 
 
@@ -288,6 +285,7 @@ def main():
     print()
     print("- - - - - - - - - - - - - - - - - -")
     print("Welcome to the Years 7-9 General Knowledge Quiz!")
+    print("Please note this quiz requires a stable internet connection.")
     print("- - - - - - - - - - - - - - - - - -")
 
     questions = load_questions()
