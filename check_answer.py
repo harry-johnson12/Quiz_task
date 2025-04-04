@@ -3,7 +3,7 @@ def check_answer(question_text, user_answer):
     from openai import OpenAI
 
     # Initialize the OpenAI client with your API key
-    client = OpenAI(api_key="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")  # Replace with your actual API key
+    client = OpenAI(api_key="gfdsgd")  # Replace with your actual API key
 
     # Prompt construction
 
