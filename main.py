@@ -5,6 +5,8 @@ from check_answer import check_answer
 #highscore file format is: name, year, subject, score
 #questions file format is: year, subject, question, hint
 
+#Put the API key in the check_answer.py file
+
 def load_highscores():
     highscores = []
     with open("highscores.csv", mode="r", newline="") as highscore_file:
@@ -104,9 +106,10 @@ def run_quiz(questions, year_group, subject, name):
         if not user_answer.lower() == "skip": # if they say skip - skip all of this
 
             attempts = 0 #attempts to load a question
+            key_error_sent = False
             while attempts < 3:
                 try:
-                    checked_answer = check_answer(question_text, user_answer)
+                    checked_answer, key_error_sent = check_answer(question_text, user_answer, key_error_sent) #check the answer
                     break
                 except:
                     attempts += 1
@@ -115,6 +118,8 @@ def run_quiz(questions, year_group, subject, name):
                 print()
                 print("- - - - Failed to fetch answer - - - -")
                 print("- - - - - Here's one point! - - - ")
+                print()
+                print("Please ensure you have entered a valid API key in the check_answer.py file, and a stable internet connection.")
                 failed = True
 
                 current_score += 1
