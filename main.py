@@ -208,19 +208,16 @@ def get_year_group(prompt):
         except ValueError: # if the user enters a string
             print()
             print("Please enter a number. (7, 8, or 9)")
-            print()
-
+            prompt = ""
 
     while year_group < 7 or year_group > 9: # if the year group is not between 7 and 9         
         print()
-        print("Please enter a year group between 7 and 9.")
-        print()
+        print("Please enter a year group (7, 8, or 9)")
         year_group = get_year_group("")
 
     return year_group
 
 def year_group_selection():
-
     year_group = get_year_group("Please enter your year group: ")
     print()
     print(f"Awesome! Year {year_group} selected, press ENTER to continue.")
@@ -228,11 +225,11 @@ def year_group_selection():
     change = input() #continues on enter
 
     while change.lower() == "change": # if the user wants to change their year group
+        print()
         year_group = get_year_group("Please enter your year group: ")
         print()
         print(f"Awesome! Year {year_group} selected, press ENTER to continue.")
         print("// If you would like to change your year group, type 'Change' and press enter.")
-        print()  
         change = input()
     
     return year_group
